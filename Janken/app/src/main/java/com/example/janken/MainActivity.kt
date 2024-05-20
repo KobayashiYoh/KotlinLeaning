@@ -5,8 +5,10 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.edit
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.preference.PreferenceManager
 import com.example.janken.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +22,11 @@ class MainActivity : AppCompatActivity() {
         binding.gu.setOnClickListener { onJankenButtonTapped(it) }
         binding.choki.setOnClickListener { onJankenButtonTapped(it) }
         binding.pa.setOnClickListener { onJankenButtonTapped(it) }
+
+        val pref = PreferenceManager.getDefaultSharedPreferences(this)
+        pref.edit {
+            clear()
+        }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
