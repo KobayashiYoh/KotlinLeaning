@@ -9,29 +9,29 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/cost_of_service"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:ems="10"
         android:inputType="number|numberDecimal"
-        android:text="Cost of Service"
+        android:text="@string/cost_of_service"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
-        android:id="@+id/radioGroup4"
+        android:id="@+id/tip_options"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:checkedButton="@id/option_twenty_percent"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText">
+        app:layout_constraintTop_toBottomOf="@+id/service_question">
 
         <RadioButton
             android:id="@+id/option_twenty_percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Amazing (20%)"
+            android:text="@string/amazing_service"
             tools:layout_editor_absoluteX="68dp"
             tools:layout_editor_absoluteY="173dp" />
 
@@ -39,7 +39,7 @@
             android:id="@+id/option_eighteen_percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Good (18%)"
+            android:text="@string/good_service"
             app:layout_constraintTop_toBottomOf="@+id/option_twenty_percent"
             tools:layout_editor_absoluteX="68dp" />
 
@@ -47,7 +47,7 @@
             android:id="@+id/option_fifteen_percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Okay (15%)"
+            android:text="@string/ok_service"
             app:layout_constraintTop_toBottomOf="@+id/option_eighteen_percent"
             tools:layout_editor_absoluteX="68dp" />
     </RadioGroup>
@@ -57,16 +57,16 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:minHeight="48dp"
-        android:text="Round up tip?"
+        android:text="@string/round_up_tip"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup4" />
+        app:layout_constraintTop_toBottomOf="@+id/tip_options" />
 
     <Button
         android:id="@+id/calculate_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Calculate"
+        android:text="@string/calculate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/round_up_switch" />
@@ -75,8 +75,16 @@
         android:id="@+id/tip_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tip Amount"
+        android:text="@string/tip_amount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calculate_button" />
+
+    <TextView
+        android:id="@+id/service_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/how_was_the_service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cost_of_service" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
