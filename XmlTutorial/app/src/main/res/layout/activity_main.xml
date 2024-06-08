@@ -13,8 +13,9 @@
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:ems="10"
+        android:hint="@string/cost_of_service"
+        android:importantForAutofill="no"
         android:inputType="number|numberDecimal"
-        android:text="@string/cost_of_service"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,7 +53,7 @@
             tools:layout_editor_absoluteX="68dp" />
     </RadioGroup>
 
-    <Switch
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/round_up_switch"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
