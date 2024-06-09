@@ -63,7 +63,7 @@ fun LemonadeApp() {
                 LemonTextAndImage(
                     textId = R.string.lemon_squeeze,
                     painterId = R.drawable.lemon_squeeze,
-                    descriptionId = R.string.lemon_content_description,
+                    descriptionId = R.string.lemonade_content_description,
                     onStartClicked = {
                         currentStep = 3
                     }
@@ -71,9 +71,9 @@ fun LemonadeApp() {
             }
             3 -> {
                 LemonTextAndImage(
-                    textId = R.string.lemon_select,
-                    painterId = R.drawable.lemon_tree,
-                    descriptionId = R.string.lemon_tree_content_description,
+                    textId = R.string.lemon_drink,
+                    painterId = R.drawable.lemon_drink,
+                    descriptionId = R.string.lemonade_content_description,
                     onStartClicked = {
                         currentStep = 4
                     }
@@ -81,9 +81,9 @@ fun LemonadeApp() {
             }
             else -> {
                 LemonTextAndImage(
-                    textId = R.string.lemon_squeeze,
-                    painterId = R.drawable.lemon_squeeze,
-                    descriptionId = R.string.lemon_content_description,
+                    textId = R.string.lemon_empty_glass,
+                    painterId = R.drawable.lemon_restart,
+                    descriptionId = R.string.empty_glass_content_description,
                     onStartClicked = {
                         currentStep = 1
                     }
